@@ -10,6 +10,7 @@ body {
     color: #222;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    background-image: url(./img/bg.svg);
 }
 
 .wrapper{
@@ -17,6 +18,24 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+
+/* Header Styled */
+
+.header__styled {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header__logo {
+    border-radius: 0 0 35px 35px;
+    background-color: #ECE0B5;
+    padding: 21px 36px;
+    height: fit-content;
+}
+
+/* /Header Styled */
 
 /* Header */
 
