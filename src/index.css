@@ -39,7 +39,8 @@ body {
     font-weight: 300;
     background-image: url(./img/bg.svg);
     background-repeat: no-repeat;
-    background-size: 100% 100%ы;
+    background-size: cover;
+    background-position: fixed;
 }
 
 .wrapper{
@@ -153,6 +154,33 @@ body {
     font-weight: 500;
 }
 
+@media (max-width: 800px) {
+    .header__styled {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header__logo {
+        align-self: center;
+    }
+
+    .header__more {
+        display: none;
+    }
+
+    .header__content {
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__links {
+        padding: 0;
+    }
+}
+
 /* /Header Styled */
 
 /* Registration Form, Password Form, Login Form */
@@ -174,7 +202,7 @@ body {
     padding: 50px 0;
     width: 50%;
     align-items: center;
-    margin-top: 80px;
+    margin: 80px 0;
 }
 
 .registration__input {
@@ -194,7 +222,6 @@ body {
     font-weight: 700;
     color: white;
     background-color: #FF6600;
-    width: 25%;
 }
 
 .registration__form h2 {
@@ -213,6 +240,45 @@ body {
     margin-bottom: 60px;
 }
 
+@media (max-width: 600px) {
+    .registration__submit {
+        padding: 10px 15px;
+    }
+
+    .registration__form h2 {
+        font-size: 24px;
+    }
+    .registration__form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 500px) {
+    .registration__submit {
+        font-size: 10px;
+    }
+
+    
+    .registration__form {
+        width: 85%;
+    }
+    
+    .registration__form h2 {
+        font-size: 18px;
+    }
+
+    .registration__input {
+        font-size: 10px;
+    }
+
+    .registration__form h4 {
+        font-size: 24px;
+    }
+
+}
+
+
+
 
 /* /Registration Form, Password Form, Login Form*/
 
@@ -230,8 +296,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-self: start;
-    margin-left: 60px;
+    align-self: flex-start;
     margin-bottom: 60px;
 }
 
@@ -243,11 +308,13 @@ body {
     font-size: 34px;
     margin-right: 40px;
     font-weight: 500;
+    text-wrap: nowrap;
 }
 
 .basket__head h5 {
     font-size: 24px;
     font-weight: 100;
+    text-wrap: nowrap;
 }
 
 .basket__container {
@@ -354,6 +421,56 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 1180px) {
+    .basket__submit button {
+        font-size: 18px;
+        padding: 28px 25px;
+    }
+
+    .basket__submit {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .basket__submit {
+        width: 100%;
+        flex-direction: column;
+    }
+    .basket__submit button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .basket__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .basket__item__desc {
+        align-items: center;
+    }
+
+    .basket__item__desc span{
+        margin: 10px 0;
+    }
+
+    .basket__item__control {
+        padding: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .basket__head {
+        flex-direction: column;
+    }
+
+}
 
 /* /Basket */
 
@@ -512,6 +629,80 @@ body {
     padding: 16px 10px;
 }
 
+
+@media (max-width: 1100px) {
+    .item__container{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .item__desc {
+        align-self: center;
+    }
+    
+    .item__section {
+        align-items: center;
+    }
+
+    .item__img {
+        margin: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    
+
+    .item__img {
+        width: 400px;
+        height: 400px;
+    }
+    .item__img img{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .item__desc {
+        margin: 0 20px;
+    }
+
+    .item__img {
+        width: 400px;
+        height: 400px;
+    }
+    .item__img img{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    .item__img {
+        width: 200px;
+        height: 200px;
+    }
+    .item__img img{
+        width: 100%;
+        height: 50%;
+    }
+
+    .item__buy_btn {
+        padding: 16px 58px;
+    }
+    .item__ccals {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .ccals__count, .ccals__name {
+        text-align: center;
+    }
+}
+
 /* /Item */
 
 /* Header */
@@ -618,6 +809,4 @@ header {
     border-radius: 16px;
     width: auto;
     height: 200px;
-
-
 }

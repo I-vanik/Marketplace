@@ -9,8 +9,8 @@ import { Registration } from "./components/Registration";
 function App() {
   return (
     <>
-    <Header/>
-    <Main/>
+      <Header />
+      <Main />
     </>
   );
 }

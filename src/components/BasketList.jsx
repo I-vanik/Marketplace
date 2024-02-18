@@ -11,8 +11,7 @@ export const BasketList = () => {
         <div className="basket__container">
             <div className="basket">
                 <div className="basket__head">
-                    <img src={arrow} alt="" />
-                    <h2>Корзина</h2>
+                    <h2><img src={arrow} alt="" />Корзина</h2>
                     <h5>3 товара</h5>
                 </div>
                 <div className="basket__item">
