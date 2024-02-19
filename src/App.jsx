@@ -11,7 +11,7 @@ function App() {
 
 
     <>
-      <div className="wrapper">
+      <div>
         {/* <Header /> Перенес его внутрь MAIN */}
         <Router>
           <Routes>
