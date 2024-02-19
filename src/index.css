@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap');
-
+@import url('components/Header/header.css');
 * {
     margin: 0;
     padding: 0;
@@ -7,122 +7,42 @@
 
 body {
     background: #fff;
+    background-image: url(../public/img/bk.svg);
     color: #222;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
+.header-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 30px;
+    
+}
+
 .wrapper{
     max-width: 1145px;
-    margin: 0 auto;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 /* Header */
 
-header {
-    margin: 0 0 25px 0;
-}
 
-.header-field {
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-    background: #D6C698;
-    width: 1145px;
-    height: 58px;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    
-}
-
-.header__form{
-    display: flex;
-    align-items: center;
-    width: 860px;
-    height: 33px;
-    margin: 0 0 0 30px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #fff;
-}
-
-.header__form-input{
-    width: 820px;
-    height: 33px;
-    padding: 0 0 0 10px;
-    border: 0;
-    border-radius: 10px;
-    outline: none;
-    font-size: 14px;
-}
-
-.header__form-btn{
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-}
-
-.header__account {
-    display: flex;
-}
-.header__account p {
-    font-size: 13px;
-    margin: 0 0 0 12px;
-}
 
 /* Main */
 
-.main-field {
-    background: #ECE0B5;
-    border-radius: 35px;
-    width: 1145px;
-    height: auto;
-    padding: 63px 0;
-}
   /* Slider */
 
-.main__slider {
-    margin: 0 0 42px 0;
-}
+
 
   /* Services */
 
-.services {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.services_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    color: #67430C;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 99px;
-    width: 128px;
-    height: 55px;
-    margin: 0 0 33px 0;
-}
-.services_title h2 {
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.services-grid{
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.services-grid__items {
-    background: #D6C698;
-    border-radius: 16px;
-    width: auto;
-    height: 200px;
-
-
+@media (max-width: 1471px) {
+    .header-logo {
+        display:block;
+        margin: 0;
+        padding: 0;
+    }
 }

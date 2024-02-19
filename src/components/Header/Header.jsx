@@ -1,5 +1,5 @@
 import React from 'react'
-import Services from './Services'
+import './header.css'
 
 export default function Header() {
   return (
@@ -16,10 +16,10 @@ export default function Header() {
                     <p>Учетная <br/> <strong>Запись</strong> </p>
                 </div>
                 <div className='header__favorite'>
-                    <img src='img/icons/favorite.svg'/>
+                    <img  className='header__favorite_img' src='img/icons/favorite.svg'/>
                 </div>
                 <div className='header_cart'>
-                    <img src='img/icons/cart.svg'/>
+                    <img className='header__favorite_cart' src='img/icons/cart.svg'/>
                 </div>
                 <div></div>
             </div>

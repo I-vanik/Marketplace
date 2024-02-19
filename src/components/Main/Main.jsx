@@ -1,6 +1,8 @@
 import React from 'react'
-import Services from './Services'
-import Slider from './Slider'
+import Services from './Services/Services'
+import Slider from '../Slider/Slider'
+import News from '../News/News'
+import './main.css'
 
 export default function Main() {
   return (
@@ -11,6 +13,9 @@ export default function Main() {
         </div>
         <div>
           <Services/>
+        </div>
+        <div>
+          <News/>
         </div>
       </div>
     </main>
