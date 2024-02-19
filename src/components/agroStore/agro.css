@@ -1,0 +1,58 @@
+.main-field-agro {
+    background: #ECE0B5;
+    border-radius: 35px;
+    height: auto;
+    padding: 40px 30px;
+    margin: 0 0 40px 0;
+}
+
+.field-agro-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.agro-slider-wrapper {
+    display: flex;
+    justify-content: space-evenly;   
+    width: 100%; 
+    padding: 0 20px;
+
+}
+
+.agro-slider-wrapper-card{
+    border-radius: 20px;
+    height: 234px;
+    width: 187px;
+   
+}
+
+.agro-slider-wrapper-card h3 {
+    margin: 0 0 20px 0;
+    color: #fff;
+}
+
+.agro-slider-card1,
+.agro-slider-card2,
+.agro-slider-card3{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    
+}
+.agro-slider-card1 {
+    background-image: url(/public/img/cardSliderImg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.agro-slider-card2 {
+    background-image: url(/public/img/cardSliderImg2.jpg);
+}
+
+.agro-slider-card3 {
+    background-image: url(/public/img/cardSliderImg3.jpg);
+    
+}
