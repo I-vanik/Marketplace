@@ -1,21 +1,22 @@
 import React from 'react'
 import Header from '../Header/Header'
 import HeadeLogoField from '../Header-logo-field/HeaderLogoField'
+import SubAgro from '../subAgro/subAgro'
 import Footer from '../Footer/Footer'
 
 import './agro.css'
 
 export default function Agro() {
   return (
-
-
-
     <div className="header-logo">
         <div className="header-logo-field">
             <HeadeLogoField/>
         </div>
+
         <div className="container">
             <Header/>
+
+
             <div className='main-field-agro'>
                 <div className="field-agro-slider">
                     <div className="agro-slider-btn">
