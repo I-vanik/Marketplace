@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import carrot from '../img/carrot.png'
 
-export const ItemDesc = () => {
+import {customContext} from '../components/Context'
+
+export const ItemDesc = (props) => {
+
+    const {name, img } = props
+
+    const {addProduct} = useContext(customContext)
+    const [id, setId] = useState(0)
+
+
     return (
         <div className='item__container'>
             <div className="item__img">
-                <img src={carrot} alt="" />
+                <img src={img} alt="" />
             </div>
             <div className="item__desc">
                 <div className="item__section_bordered">
-                    <h2>Морковь</h2>
+                    <h2>{name}</h2>
                     <span className='item__weight'>1 кг</span>
                 </div>
                 <div className="item__section_bordered">
@@ -38,7 +47,10 @@ export const ItemDesc = () => {
                     <h6 className='item__head'>Срок хранения</h6>
                     <h3 className='item__safetime'>1 Месяц</h3>
                     <span className='item__safeconditions'>При температуре от +2°С до +10°С</span>
-                    <button className='item__buy_btn'>
+                    <button onClick={() => {
+                        addProduct({name: name, img: img, price: 129, id: id})
+                        setId(prev => +prev + 1)
+                        }} className='item__buy_btn'>
                         Купить
                         <span>129 за кг</span>
                     </button>

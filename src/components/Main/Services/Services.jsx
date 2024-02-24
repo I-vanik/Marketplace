@@ -1,8 +1,10 @@
 import React from 'react'
 import './services.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Services() {
+
+
   return (
     <div className='services'>
         <div className='services_title'>
@@ -11,13 +13,13 @@ export default function Services() {
         <div className='services-grid'>
         
             <a className='services-grid__items services-grid__items_agro'>
-            <NavLink to={`/agroStore`}>
+            <Link to={`/agroStore`} >
               <div className='services-grid__items-holder'>
               
                 <div className='services-grid__items-title'>Агро</div>
                 
               </div>
-              </NavLink>
+              </Link>
             </a>
         
             <a className='services-grid__items services-grid__items_hotel'>
@@ -53,7 +55,7 @@ export default function Services() {
         </div>
 
         <div className="services-list">
-        <NavLink to={`/agroStore`}>
+        <Link to={`/agroStore`} >
           <a href="" className="services-list-link"> 
           
             <div className="services-list-link-bg">
@@ -61,7 +63,7 @@ export default function Services() {
             </div>
           
           </a>
-          </NavLink>
+          </Link>
           <a href="" className="services-list-link">
             <div className="services-list-link-bg">
               <h3>Гостиница</h3>

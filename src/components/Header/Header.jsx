@@ -1,28 +1,47 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './header.css'
+import logo from '../../img/agrarniyLogo.png'
+import moreImg from '../../img/Vector (1).svg'
+import searchImg from '../../img/Vector (2).svg'
+import accountImg from '../../img/Vector (3).svg'
+import likesImg from '../../img/Vector (4).svg'
+import basketImg from '../../img/Vector (5).svg'
+import {Link} from 'react-router-dom'
+import { customContext } from '../Context'
 
 export default function Header() {
+
+
+    const {basket} = useContext(customContext)
+
   return (
-    <header>
-            <div className='header-field'>
-                <form className='header__form'>
-                    <input className='header__form-input' type='text' placeholder='Поиск'/>
-                    <a className='header__form-btn' type='submit'>
-                        <img src='img/icons/Vector.svg' className='header__img-search'/>
-                    </a>
-                </form>
-                <div className='header__account'>
-                    <img src='img/icons/people_account.svg' className='header__account_img'/>
-                    <p>Учетная <br/> <strong>Запись</strong> </p>
-                </div>
-                <div className='header__favorite'>
-                    <img  className='header__favorite_img' src='img/icons/favorite.svg'/>
-                </div>
-                <div className='header_cart'>
-                    <img className='header__favorite_cart' src='img/icons/cart.svg'/>
-                </div>
-                <div></div>
+    <header className='header__styled'>
+        <div className="header__content">
+            <img src={moreImg} alt="" className='header__more'/>
+            <div className="header__wrap">
+            <input type="text" name="" id="" className='header__search' placeholder='Поиск'/>
+            <img src={searchImg} alt="" className='header__search_btn'/>
             </div>
+            <div className="header__links">
+            <div className="header__account">
+                <img src={accountImg} alt="" className="header__account_img"/>
+                <div className="header__account_wrap">
+                    <span className='header__account_desc'>Учетная</span>
+                    <br />
+                    <span className='header__account_desc_second-line'>Запись</span>
+                </div>
+            </div>
+            <div className="header__likes">
+                <img src={likesImg} alt="" />
+                <div><span>1</span></div>
+            </div>
+            
+            <Link to="/basket" className="header__cart">
+                <img src={basketImg} alt="" />
+                <div><span>{basket.length}</span></div>
+            </Link>
+            </div>
+        </div>
     </header>
   )
 }
