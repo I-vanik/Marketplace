@@ -1,8 +1,10 @@
 import React from 'react'
 import './services.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Services() {
+
+
   return (
     <div className='services'>
         <div className='services_title'>

@@ -1,21 +1,22 @@
 import React, { useContext } from 'react'
-import './header.css'
-import logo from '../../img/agrarniyLogo.png'
-import moreImg from '../../img/Vector (1).svg'
-import searchImg from '../../img/Vector (2).svg'
-import accountImg from '../../img/Vector (3).svg'
-import likesImg from '../../img/Vector (4).svg'
-import basketImg from '../../img/Vector (5).svg'
-import {Link} from 'react-router-dom'
-import { customContext } from '../Context'
+import logo from '../img/agrarniyLogo.png'
+import moreImg from '../img/Vector (1).svg'
+import searchImg from '../img/Vector (2).svg'
+import accountImg from '../img/Vector (3).svg'
+import likesImg from '../img/Vector (4).svg'
+import basketImg from '../img/Vector (5).svg'
+import { Link } from 'react-router-dom'
+import { customContext } from './Context'
 
-export default function Header() {
-
+export const StyledHeader = () => {
 
     const {basket} = useContext(customContext)
 
   return (
     <header className='header__styled'>
+        <Link to="/" className="header__logo">
+            <img src={logo} alt="" className="logo__img" />
+        </Link>
         <div className="header__content">
             <img src={moreImg} alt="" className='header__more'/>
             <div className="header__wrap">
@@ -35,8 +36,7 @@ export default function Header() {
                 <img src={likesImg} alt="" />
                 <div><span>1</span></div>
             </div>
-            
-            <Link to="/basket" className="header__cart">
+            <Link to={"/basket"} className="header__cart">
                 <img src={basketImg} alt="" />
                 <div><span>{basket.length}</span></div>
             </Link>
@@ -45,6 +45,3 @@ export default function Header() {
     </header>
   )
 }
-
-
-

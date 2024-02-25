@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Services from './Services/Services'
 import Slider from '../Slider/Slider'
 import News from '../News/News'
@@ -8,14 +8,16 @@ import Footer from '../Footer/Footer'
 import './main.css'
 
 export default function Main() {
+
+
   return (
 
   <div className="header-logo">
-    <div className="header-logo-field">
+    <div className="header-cont">
       <HeadeLogoField/>
     </div>
     <div className="container">
-      <Header/> 
+      <Header /> 
       <main className='main'>
         <div className='main-field'> 
           <div>
